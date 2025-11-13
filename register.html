@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register — Teacher Booking Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="register">
+  <div class="container">
+    <div class="brand">
+      <div class="logo">TB</div>
+      <div>
+        <h1>Create Student Account</h1>
+        <div class="muted">Frontend-only demo (LocalStorage)</div>
+      </div>
+    </div>
+
+    <section class="card">
+      <div class="card-header">
+        <h2>Student Registration</h2>
+        <a class="btn ghost" href="index.html">Back to Login</a>
+      </div>
+      <div class="card-body">
+        <form id="register-form" autocomplete="on">
+          <div class="row two">
+            <div>
+              <label for="reg-name">Full Name</label>
+              <input id="reg-name" class="input" type="text" required placeholder="Your Name"/>
+            </div>
+            <div>
+              <label for="reg-email">Email</label>
+              <input id="reg-email" class="input" type="email" required placeholder="you@example.com"/>
+            </div>
+          </div>
+          <div class="row two" style="margin-top:12px;">
+            <div>
+              <label for="reg-password">Password</label>
+              <input id="reg-password" class="input" type="password" required placeholder="Min 6 characters" minlength="6"/>
+            </div>
+            <div>
+              <label for="reg-confirm">Confirm Password</label>
+              <input id="reg-confirm" class="input" type="password" required placeholder="Re-enter password" minlength="6"/>
+            </div>
+          </div>
+          <div style="display:flex; justify-content:flex-end; margin-top:16px;">
+            <button class="btn" type="submit">Create Account</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

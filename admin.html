@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Panel — Teacher Booking Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="admin">
+  <div class="container">
+    <div class="topbar" style="margin:18px 0;">
+      <div>
+        <h2 style="margin:0;">Admin Panel</h2>
+        <div class="muted" id="admin-welcome" style="font-size:14px;">Welcome</div>
+      </div>
+      <div style="display:flex; gap:10px;">
+        <a href="index.html" id="btn-admin-logout" class="btn ghost">Logout</a>
+      </div>
+    </div>
+
+    <div class="grid">
+      <!-- TEACHERS -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Manage Teachers</h2>
+          <div class="topbar">
+            <input id="teacher-search" class="input" placeholder="Search teachers by name or email">
+            <button id="btn-teacher-resetform" class="btn ghost" type="button">New</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <!-- Add/Edit form -->
+          <form id="teacher-form">
+            <input type="hidden" id="teacher-id">
+            <div class="row two">
+              <div>
+                <label for="teacher-name">Name</label>
+                <input id="teacher-name" class="input" type="text" required>
+              </div>
+              <div>
+                <label for="teacher-email-new">Email</label>
+                <input id="teacher-email-new" class="input" type="email" required>
+              </div>
+            </div>
+            <div class="row two" style="margin-top:12px;">
+              <div>
+                <label for="teacher-subject">Subject</label>
+                <input id="teacher-subject" class="input" type="text" required>
+              </div>
+              <div>
+                <label for="teacher-password">Password</label>
+                <input id="teacher-password" class="input" type="text" required placeholder="e.g. teach123">
+              </div>
+            </div>
+            <div style="display:flex; justify-content:flex-end; margin-top:12px; gap:10px;">
+              <button class="btn" type="submit" id="btn-save-teacher">Save Teacher</button>
+              <button class="btn danger" type="button" id="btn-delete-teacher" disabled>Delete</button>
+            </div>
+          </form>
+
+          <div class="divider"></div>
+
+          <div id="admin-teacher-list" class="list"></div>
+          <div id="admin-teacher-empty" class="empty hidden">No teachers found.</div>
+        </div>
+      </div>
+
+      <!-- STUDENTS -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Manage Students</h2>
+          <input id="student-search" class="input" placeholder="Search students by name or email" style="max-width:300px;">
+        </div>
+        <div class="card-body">
+          <div id="admin-student-list" class="list"></div>
+          <div id="admin-student-empty" class="empty hidden">No students found.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOOKINGS -->
+    <div class="card" style="margin-top:24px;">
+      <div class="card-header">
+        <h2>All Bookings</h2>
+        <div style="display:flex; gap:10px; align-items:center;">
+          <input type="date" id="booking-date-filter" class="input" style="max-width:180px;">
+          <select id="booking-status-filter" class="select" style="max-width:200px;">
+            <option value="">All statuses</option>
+            <option>Booked</option>
+            <option>Approved</option>
+            <option>Rejected</option>
+            <option>Completed</option>
+          </select>
+          <button id="btn-booking-clear" class="btn ghost" type="button">Clear</button>
+          <button id="btn-booking-refresh" class="btn ghost" type="button">Refresh</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div id="admin-booking-list" class="list"></div>
+        <div id="admin-booking-empty" class="empty hidden">No bookings.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

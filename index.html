@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teacher Booking Portal — Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login">
+  <div class="container">
+    <div class="brand">
+      <div class="logo">TB</div>
+      <div>
+        <h1>Teacher Booking Portal</h1>
+        <div class="muted">Login to continue</div>
+      </div>
+    </div>
+
+    <section class="card">
+      <div class="card-header">
+        <h2>Login</h2>
+        <a class="btn ghost" href="register.html">Register (Student)</a>
+      </div>
+      <div class="card-body">
+        <div class="tabs" role="tablist">
+          <button id="tab-student" class="tab active" role="tab" aria-controls="panel-student" aria-selected="true">Student</button>
+          <button id="tab-teacher" class="tab" role="tab" aria-controls="panel-teacher" aria-selected="false">Teacher</button>
+          <button id="tab-admin" class="tab" role="tab" aria-controls="panel-admin" aria-selected="false">Admin</button>
+        </div>
+
+        <!-- Student Login Panel -->
+        <div id="panel-student" role="tabpanel" aria-labelledby="tab-student" style="margin-top:16px;">
+          <form id="student-login-form" autocomplete="on">
+            <div class="row">
+              <div>
+                <label for="student-email">Email</label>
+                <input id="student-email" class="input" type="email" required placeholder="student@demo.com"/>
+              </div>
+              <div>
+                <label for="student-password">Password</label>
+                <input id="student-password" class="input" type="password" required placeholder="••••••"/>
+              </div>
+            </div>
+            <div class="topbar" style="margin-top:16px;">
+              <div class="muted" style="font-size:13px;">Demo → <b>student@demo.com</b> / <b>123456</b></div>
+              <button class="btn" type="submit">Login as Student</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Teacher Login Panel -->
+        <div id="panel-teacher" role="tabpanel" aria-labelledby="tab-teacher" class="hidden" style="margin-top:16px;">
+          <form id="teacher-login-form" autocomplete="on">
+            <div class="row">
+              <div>
+                <label for="teacher-email">Email</label>
+                <input id="teacher-email" class="input" type="email" required placeholder="alice@school.com"/>
+              </div>
+              <div>
+                <label for="teacher-password">Password</label>
+                <input id="teacher-password" class="input" type="password" required placeholder="••••••"/>
+              </div>
+            </div>
+            <div class="topbar" style="margin-top:16px;">
+              <div class="muted" style="font-size:13px;">Demos → <b>alice@school.com</b>, <b>bob@school.com</b>, <b>carol@school.com</b> / <b>teach123</b></div>
+              <button class="btn" type="submit">Login as Teacher</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Admin Login Panel -->
+        <div id="panel-admin" role="tabpanel" aria-labelledby="tab-admin" class="hidden" style="margin-top:16px;">
+          <form id="admin-login-form" autocomplete="on">
+            <div class="row">
+              <div>
+                <label for="admin-email">Email</label>
+                <input id="admin-email" class="input" type="email" required placeholder="admin@demo.com"/>
+              </div>
+              <div>
+                <label for="admin-password">Password</label>
+                <input id="admin-password" class="input" type="password" required placeholder="••••••"/>
+              </div>
+            </div>
+            <div class="topbar" style="margin-top:16px;">
+              <div class="muted" style="font-size:13px;">Default → <b>admin@demo.com</b> / <b>admin123</b></div>
+              <button class="btn" type="submit">Login as Admin</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teacher Dashboard — Teacher Booking Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="teacher">
+  <div class="container">
+    <div class="topbar" style="margin:18px 0;">
+      <div>
+        <h2 style="margin:0;">Teacher Dashboard</h2>
+        <div class="muted" id="teacher-welcome" style="font-size:14px;">Welcome</div>
+      </div>
+      <div style="display:flex; gap:10px;">
+        <a href="index.html" id="btn-teacher-logout" class="btn ghost">Logout</a>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card-header">
+          <h2>Appointments</h2>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <input id="filter-date" type="date" class="input" style="max-width: 180px;"/>
+            <button id="btn-clear-filter" class="btn ghost" type="button">Clear</button>
+            <button id="btn-refresh-teacher" class="btn ghost" type="button">Refresh</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div id="teacher-bookings" class="list"></div>
+          <div id="teacher-empty" class="empty hidden">No bookings yet.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Your Profile</h2>
+          <span class="pill" id="teacher-subject-pill">Subject</span>
+        </div>
+        <div class="card-body">
+          <div class="item">
+            <div class="meta">
+              <div class="avatar" id="teacher-avatar">T</div>
+              <div>
+                <div id="teacher-name" style="font-weight:600;">Teacher</div>
+                <div class="muted" id="teacher-email-display" style="font-size:14px;">email</div>
+              </div>
+            </div>
+            <button id="btn-copy-teacher-email" class="btn ghost" type="button">Copy Email</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
