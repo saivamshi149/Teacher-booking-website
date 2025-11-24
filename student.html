@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Dashboard — Teacher Booking Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="student">
+  <div class="container">
+    <div class="topbar" style="margin:18px 0;">
+      <div>
+        <h2 style="margin:0;">Student Dashboard</h2>
+        <!-- this is the element script.js tries to set -->
+        <div class="muted" id="student-welcome" style="font-size:14px;">Welcome</div>
+      </div>
+      <div style="display:flex; gap:10px;">
+        <!-- logout link (script clears session on click) -->
+        <a href="index.html" id="btn-student-logout" class="btn ghost">Logout</a>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card-header">
+          <h2>Book an Appointment</h2>
+          <span class="pill"><span>🗓️</span> 09:00–17:00 only</span>
+        </div>
+
+        <div class="card-body">
+          <!-- booking form (script attaches to #booking-form) -->
+          <form id="booking-form">
+            <div class="row two">
+              <div>
+                <label for="teacher-select">Select Teacher</label>
+                <select id="teacher-select" class="select" required></select>
+              </div>
+              <div>
+                <label for="booking-date">Select Date</label>
+                <input id="booking-date" class="input" type="date" required />
+              </div>
+            </div>
+
+            <div class="row two" style="margin-top:12px;">
+              <div>
+                <label for="booking-time">Select Time</label>
+                <input id="booking-time" class="input" type="time" step="1800" required />
+              </div>
+              <div>
+                <label for="booking-notes">Notes (optional)</label>
+                <input id="booking-notes" class="input" type="text" placeholder="Topic, doubts, etc." />
+              </div>
+            </div>
+
+            <div style="display:flex; justify-content:flex-end; margin-top:16px;">
+              <button class="btn" type="submit">Book Appointment</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Your Bookings</h2>
+          <!-- refresh button (script looks for #btn-refresh-student) -->
+          <button id="btn-refresh-student" class="btn ghost" type="button">Refresh</button>
+        </div>
+
+        <div class="card-body">
+          <!-- booking list containers (script expects these IDs) -->
+          <div id="student-bookings" class="list"></div>
+          <div id="student-empty" class="empty hidden">No bookings yet.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

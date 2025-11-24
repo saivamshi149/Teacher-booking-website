@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register — Teacher Booking Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="register">
+  <!-- same content as before -->
+  <div class="container">
+
+    <div class="brand">
+      <div class="logo">TB</div>
+      <div>
+        <h1>Create Student Account</h1>
+      </div>
+    </div>
+
+    <section class="card">
+      <div class="card-header">
+        <h2>Student Registration</h2>
+        <a class="btn ghost" href="index.html">Back to Login</a>
+      </div>
+
+      <div class="card-body">
+        <form id="register-form">
+          <div class="row two">
+            <div>
+              <label>Name</label>
+              <input id="reg-name" class="input" type="text" required>
+            </div>
+            <div>
+              <label>Email</label>
+              <input id="reg-email" class="input" type="email" required>
+            </div>
+          </div>
+
+          <div class="row two">
+            <div>
+              <label>Password</label>
+              <input id="reg-password" class="input" type="password" required minlength="6">
+            </div>
+            <div>
+              <label>Confirm Password</label>
+              <input id="reg-confirm" class="input" type="password" required minlength="6">
+            </div>
+          </div>
+
+          <button class="btn" type="submit">Create Account</button>
+        </form>
+      </div>
+
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

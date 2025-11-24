@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teacher Booking Portal — Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="login">
+  <!-- (same content as before — unchanged except links) -->
+  <div class="container">
+
+    <div class="brand">
+      <div class="logo">TB</div>
+      <div>
+        <h1>Teacher Booking Portal</h1>
+        <div class="muted">Login to continue</div>
+      </div>
+    </div>
+
+    <section class="card">
+      <div class="card-header">
+        <h2>Login</h2>
+        <a class="btn ghost" href="register.html">Register (Student)</a>
+      </div>
+
+      <div class="card-body">
+        <div class="tabs">
+          <button id="tab-student" class="tab active">Student</button>
+          <button id="tab-teacher" class="tab">Teacher</button>
+          <button id="tab-admin" class="tab">Admin</button>
+        </div>
+
+        <!-- Student Login -->
+        <div id="panel-student">
+          <form id="student-login-form">
+            <div class="row">
+              <div>
+                <label>Email</label>
+                <input id="student-email" class="input" type="email" required>
+              </div>
+              <div>
+                <label>Password</label>
+                <input id="student-password" class="input" type="password" required>
+              </div>
+            </div>
+            <button class="btn" type="submit">Login as Student</button>
+          </form>
+        </div>
+
+        <!-- Teacher Login -->
+        <div id="panel-teacher" class="hidden">
+          <form id="teacher-login-form">
+            <div class="row">
+              <div>
+                <label>Email</label>
+                <input id="teacher-email" class="input" type="email" required>
+              </div>
+              <div>
+                <label>Password</label>
+                <input id="teacher-password" class="input" type="password" required>
+              </div>
+            </div>
+            <button class="btn" type="submit">Login as Teacher</button>
+          </form>
+        </div>
+
+        <!-- Admin Login -->
+        <div id="panel-admin" class="hidden">
+          <form id="admin-login-form">
+            <div class="row">
+              <div>
+                <label>Email</label>
+                <input id="admin-email" class="input" type="email" required>
+              </div>
+              <div>
+                <label>Password</label>
+                <input id="admin-password" class="input" type="password" required>
+              </div>
+            </div>
+            <button class="btn" type="submit">Login as Admin</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
